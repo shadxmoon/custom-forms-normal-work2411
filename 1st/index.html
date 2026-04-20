@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js"></script>
+</head>
+<body>
+    <form action="" id="form-registration" novalidate>
+        <div class="form__item">
+            <div>
+                <label for="login" class="form__label">Логин</label>
+            </div>
+            <div>
+                <input type="text" id="login" class="form__field" required>
+            </div>
+        </div>
+        <div class="form__item" data-error="текст ошибки">
+            <div>
+                <label for="password" class="form__label">Пароль</label>
+            </div>
+            <div>
+                <input type="password" id="password" class="form__field" required>
+            </div>
+        </div>
+        <div class="form__item" data-error="текст ошибки">
+            <div>
+                <label for="email">Email</label>
+            </div>
+            <div>
+                <input type="email" id="email" class="form__field" required>
+            </div>
+        </div>
+        <div class="form__item">
+            <div>
+               <input type="submit" class="form__btn"> 
+            </div>
+        </div>
+    </form>
+</body>
+</html>

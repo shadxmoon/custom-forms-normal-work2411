@@ -1,0 +1,18 @@
+.filter-color{
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+}
+.filter-color__item{
+    flex-shrink: 0;
+}
+.filter-color__checkbox{
+    display: none;
+}
+.filter-color__label{
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+}
