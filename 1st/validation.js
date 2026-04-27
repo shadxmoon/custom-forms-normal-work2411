@@ -8,10 +8,13 @@ form.addEventListener('submit', (e) => {
         let textMessage = "";
         inputElement.classList.remove("invalid");
         inputElement.classList.remove("valid");
-        inputElement.closest(".form__item").querySelector(".form__message-validate").innerHTML = "";
+        const messageElement = inputElement.closest(".form__item").querySelector(".form__message-validate");
+        if (messageElement) {
+            messageElement.innerHTML = "";
+        }
 
         if(inputElement.hasAttribute("required") && inputElement.value == ""){
-            textMessage += "поле должно быть заполнено <br>"   
+            textMessage += "поле должно быть заполнено <br>"
         }
         
         if(inputElement.type == "email" && !isValidEmail(inputElement.value)) {
@@ -22,7 +25,9 @@ form.addEventListener('submit', (e) => {
             textMessage += "пароль должен содержать минимум 8 символов<br>" 
         }
         if(textMessage != ""){
-            inputElement.closest(".form__item").querySelector(".form__message-validate").innerHTML=textMessage;
+            if (messageElement) {
+                messageElement.innerHTML = textMessage;
+            }
             inputElement.classList.add("invalid");
         } else {
             inputElement.classList.add("valid");

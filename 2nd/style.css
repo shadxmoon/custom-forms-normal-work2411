@@ -1,3 +1,14 @@
+.main-section{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.container{
+    border: 1px solid rgba(0, 0, 0, 0.514);
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgb(241, 241, 241);
+}
 .filter-color{
     display: flex;
     gap: 15px;
@@ -10,9 +21,102 @@
     display: none;
 }
 .filter-color__label{
+    display: inline-block;
+    position: relative;
     width: 30px;
     height: 30px;
-    border-radius: 8px;
-    position: relative;
-    display: inline-block;
+    border-radius: 5px;
+    outline:gray 0px solid;
+    outline-offset: 0px;
+    transition: outline 0.2s, outline-offset 0.2s;
+}
+.filter-color__label:hover,
+.filter-color__label:focus{
+    outline: gray 2px solid;
+    outline-offset: 3px;
+    cursor: pointer;
+}
+
+.filter-color__label:active{
+    transform: scale(1.05);
+    transition: 0.1s ease-in-out;
+}
+.filter-color__checkbox:checked+.filter-color__label{
+    outline: gray 2px solid;
+    outline-offset: 3px;
+}
+.filter-color__label::after{
+    content: "";
+    transition: transform 0.2s;
+}
+.filter-color__checkbox:checked+.filter-color__label::after,
+.filter-color__label[aria-checked="true"]::after{
+    content: "\F272";
+    font-family: "bootstrap-icons";
+    color: gray;
+    transform: scale(2);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter__section{
+    margin-bottom: 20px;
+}
+
+.filter__section h3{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.filter-size,
+.filter-brand{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.filter-size__item,
+.filter-brand__item{
+    flex-shrink: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+    accent-color: #C56FFF;
+    width: 20px;
+    height: 20px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: #C56FFF solid 1px;
+    transition: transform 0.2s, background-color 0.2s, outline 0.2s, outline-offset 0.2s;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    transform: scale(0.6);
+    background-color: #C56FFF;
+    outline: 1px solid #C56FFF;
+    outline-offset: 6px;
+}
+
+input[type="radio"]:disabled {
+    border: #808080 solid 1px;
+}
+
+input[type="radio"]:disabled:checked {
+    transform: scale(0.6);
+    background-color: #808080;
+    outline: 1px solid #808080;
+    outline-offset: 6px;
 }

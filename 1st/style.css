@@ -42,8 +42,6 @@
     border: 2px solid rgb(221, 121, 121);
     background-color: rgb(245, 187, 196);
 }
-
-.form__field.invalid+.form__message-validate{
+.form__message-validate{
     color: rgb(199, 90, 90);
-    font-size: 10px;
 }

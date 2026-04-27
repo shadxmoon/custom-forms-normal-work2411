@@ -4,26 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script defer src="check.js"></script>
 </head>
 <body>
-    <h3>цвет</h3>
-    <div class="filter-color">
-        <div class="filter-color__item">
-            <input class="filter-color__checkbox" type="checkbox" name="color-red" id="color-red">
-            <label for="color-red" class="filter-color__label" style="background-color: red;"></label>
+    <div class="main-section">
+        <div class="container">
+            <h3>цвет</h3>
+            <div class="filter-color">
+                <div class="filter-color__item">
+                    <input class="filter-color__checkbox" type="checkbox" name="color-red" id="color-red">
+                    <label for="color-red" class="filter-color__label" style="background-color: red;" tabindex="0" aria-label="красный цвет" role="checkbox" aria-checked="false"></label>
+                </div>
+                <div class="filter-color__item">
+                    <input class="filter-color__checkbox" type="checkbox" name="color-green" id="color-green">
+                    <label for="color-green" class="filter-color__label" style="background-color: green;" tabindex="0" aria-label="зеленый цвет" role="checkbox" aria-checked="false"></label>
+                </div>
+                <div class="filter-color__item">
+                    <input class="filter-color__checkbox" type="checkbox" name="color-blue" id="color-blue">
+                    <label for="color-blue" class="filter-color__label" style="background-color: blue;" tabindex="0" aria-label="голубой цвет" role="checkbox" aria-checked="false"></label>
+                </div>
+                <div class="filter-color__item">
+                    <input class="filter-color__checkbox" type="checkbox" name="color-yellow" id="color-yellow">
+                    <label for="color-yellow" class="filter-color__label" style="background-color: yellow;" tabindex="0" aria-label="желтый цвет" role="checkbox" aria-checked="false"></label>
+                </div>
+            </div>
         </div>
-        <div class="filter-color__item">
-            <input class="filter-color__checkbox" type="checkbox" name="color-green" id="color-green">
-            <label for="color-green" class="filter-color__label" style="background-color: green;"></label>
+        <div class="container">
+            <div class="filter__section">
+                <h3>Размер</h3>
+                <div class="filter-size">
+                    <div class="filter-size__item">
+                        <input class="filter-size__radio" type="radio" name="size" id="size-s">
+                        <label class="filter-size__label" for="size-s" tabindex="0" aria-label="маленький размер">S</label>
+                    </div>
+                    <div class="filter-size__item">
+                        <input class="filter-size__radio" type="radio" name="size" id="size-m">
+                        <label class="filter-size__label" for="size-m" tabindex="0" aria-label="средний размер">M</label>
+                    </div>
+                    <div class="filter-size__item">
+                        <input class="filter-size__radio" type="radio" name="size" id="size-l" disabled>
+                        <label class="filter-size__label" for="size-l" tabindex="0" aria-label="большой размер">L</label>
+                    </div>
+                    <div class="filter-size__item">
+                        <input class="filter-size__radio" type="radio" name="size" id="size-xl" disabled checked>
+                        <label class="filter-size__label" for="size-xl" tabindex="0" aria-label="очень большой размер">XL</label>
+                    </div>
+                </div>
+            </div>
+            <div class="filter__section">
+                <h3>Бренд</h3>
+                <div class="filter-brand">
+                    <div class="filter-brand__item">
+                        <input class="filter-brand__checkbox" type="checkbox" name="brand-apple" id="brand-apple">
+                        <label class="filter-brand__label" for="brand-apple" tabindex="0" aria-label="бренд apple">Apple</label>
+                    </div>
+                    <div class="filter-brand__item">
+                        <input class="filter-brand__checkbox" type="checkbox" name="brand-samsung" id="brand-samsung">
+                        <label class="filter-brand__label" for="brand-samsung" tabindex="0" aria-label="бренд samsung">Samsung</label>
+                    </div>
+                    <div class="filter-brand__item">
+                        <input class="filter-brand__checkbox" type="checkbox" name="brand-xiaomi" id="brand-xiaomi" disabled>
+                        <label class="filter-brand__label" for="brand-xiaomi" tabindex="0" aria-label="бренд xiaomi">Xiaomi</label>
+                    </div>
+                    <div class="filter-brand__item">
+                        <input class="filter-brand__checkbox" type="checkbox" name="brand-huawei" id="brand-huawei" disabled checked>
+                        <label class="filter-brand__label" for="brand-huawei" tabindex="0" aria-label="бренд huawei">Huawei</label>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="filter-color__item">
-            <input class="filter-color__checkbox" type="checkbox" name="color-blue" id="color-blue">
-            <label for="color-blue" class="filter-color__label" style="background-color: blue;"></label>
-        </div>
-        <div class="filter-color__item">
-            <input class="filter-color__checkbox" type="checkbox" name="color-yellow" id="color-yellow">
-            <label for="color-yellow" class="filter-color__label" style="background-color: yellow;"></label>
+        <div class="container">
+            <div class="filter__section">
+                <h3>Цена</h3>
+                <div class="filter-price">
+                    <div class="filter-price__range">
+                        <input type="range" class="filter-price__slider" id="price-range" min="0" max="100000" step="1000" value="50000">
+                        <div class="filter-price__values">
+                            <span class="filter-price__min">0 &#8381;</span>
+                            <span class="filter-price__max">100000 &#8381;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
+    
 </body>
 </html>
