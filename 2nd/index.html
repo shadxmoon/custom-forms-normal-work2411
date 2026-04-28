@@ -66,9 +66,6 @@
                     <label for="color-yellow" class="filter-color__label" style="background-color: yellow;" tabindex="0" aria-label="желтый цвет" role="checkbox" aria-checked="false"></label>
                 </div>
             </div>
-        </div>
-        <div class="container brands">
-            <div class="filter__section">
                 <h3>Размер</h3>
                 <div class="filter-size">
                     <div class="filter-size__item">
@@ -88,8 +85,6 @@
                         <label class="filter-size__label" for="size-xl" tabindex="3" aria-label="очень большой размер">XL</label>
                     </div>
                 </div>
-            </div>
-            <div class="filter__section">
                 <h3>Бренд</h3>
                 <div class="filter-brand">
                     <div class="filter-brand__item">
@@ -109,10 +104,9 @@
                         <label class="filter-brand__label" for="brand-huawei" tabindex="0" aria-label="бренд huawei">Huawei</label>
                     </div>
                 </div>
-            </div>
         </div>
         <div class="container">
-            <div class="filter__section">
+            <div class="filter__section ">
                 <h3>Цена</h3>
                 <div class="filter-price">
                     <div class="filter-price__range">
@@ -137,6 +131,14 @@
                         <div class="filter-delivery__max">до <span>10</span> дней</div>
                     </div>
                 </div>
+                <h3>Сортировка</h3>
+                <select name="sort" id="sort" aria-label="Сортировка товаров" class="filter-sort">
+                    <option value="popular">По популярности</option>
+                    <option value="price-asc">По возрастанию цены</option>
+                    <option value="price-desc">По убыванию цены</option>
+                    <option value="rating">По рейтингу</option>
+                    <option value="new">Сначала новые</option>
+                </select>
             </div>
         </div>
     </div>
